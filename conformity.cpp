@@ -14,17 +14,22 @@ int main() {
             cin >> moduleCode;
             v.push_back(moduleCode);
         }
+        
+        //sort the vector and create a string based on the sorted modules
         string output = "";
         sort(v.begin(), v.end());
         for(int j : v) {
             output += to_string(j);
         }
+        
+        //insert the string into map m
         if(m.find(output) == m.end()) {
             m.insert({output, 1});
         } else {
             m[output]++;
         }
     }
+    
     int max = 0;
     for(pair<string, int> p : m) {
         if(p.second > max) {
