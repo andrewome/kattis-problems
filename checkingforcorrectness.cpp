@@ -3,7 +3,7 @@ using namespace std;
 
 int moduloExponentiation(long long int a, long long int b, int m) {
     a %= m;
-    int result  = 1;
+    int result = 1;
     while(b > 0) {
         if(b%2 == 1) {
             result *= a;
